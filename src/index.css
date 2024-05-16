@@ -1,13 +1,134 @@
+/* Reset some default styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Add some basic styles for the app container */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Style the app component */
+.app {
+  width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* Style the heading */
+.app h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+}
+
+/* Style the form and input field */
+.input-container {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+/* Style the add button */
+.add-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4c6aaf;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #4f6089;
+}
+
+/* Style the filter buttons */
+.filter-container {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+.filter-button.active {
+  background-color: #4c6aaf;
+  color: #fff;
+}
+
+.filter-button:hover {
+  background-color: #bdbdbd;
+}
+
+/* Style the task list */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+  margin-right: 12px;
+}
+
+.task-text {
+  flex-grow: 1;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-button {
+  padding: 4px 8px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
 }
